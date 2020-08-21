@@ -5,7 +5,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
   template: `
   <div>
     <p>Your name: {{name}}</p>
-    <input type="text" (onChange)="nameChange.emit(this.name)">
+    <input type="text" value="{{inputValue}}" (onChange)="nameChange.emit(this.inputValue)">
   </div>
   `,
   styles: [
@@ -15,4 +15,9 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 export class TwoWayBindingComponent {
   @Input() name: string = "";
   @Output() nameChange = new EventEmitter<string>();
+  inputValue = "";
+
+  changeValue(value: string) {
+
+  }
 }

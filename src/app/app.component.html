@@ -3,6 +3,21 @@
   Start editing to see some magic happen :)
 </p>
 
+<!-- using ng-template and ng-container -->
+<ng-container [ngTemplateOutlet]="template2">
+
+</ng-container>
+
 
 
 <app-twoway [name]="name" (nameChange)="name = $event"></app-twoway>
+
+
+<ng-template #template1>
+  <p>template 1</p>
+</ng-template>
+
+
+<ng-template #template2>
+  <p>template 2</p>
+</ng-template>
